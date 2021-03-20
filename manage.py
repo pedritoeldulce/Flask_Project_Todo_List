@@ -7,4 +7,4 @@ app = create_app()
 
 if __name__ == '__main__':
     manager = Manager(app)
-    manager.run(debug=True)
+    manager.run()
