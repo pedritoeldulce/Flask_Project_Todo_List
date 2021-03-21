@@ -1,22 +1,26 @@
 {% extends 'layout.html' %}
+{% from 'helpers/_forms.html' import render_field %}  <!-- importamos una funcion -->
 
 {% block title %}
 {{ title }}
 {% endblock %}
 
 {% block container %}
+
     <div class="col-md-12 col-md-offset-1">
     <h3 class="mt-4">Login</h3>
-        <form action="index.html" class="" method="POST">
+        <form action="#" class="" method="POST">
             <div class="form-group">
-                <label for="username">Username:</label>
-                {{ form.username }}
+
+                {{ render_field(form.username, class='form-control', placeholder="Username") }}
             </div>
             <div class="form-group">
-                <label for="password">Password:</label>
-                {{ form.password }}
+
+                {{ render_field(form.password, class="form-control", placeholder='Password') }}
             </div>
 
+            <button type="submit" class="btn btn-primary" name="button">Login</button>
         </form>
     </div>
+
 {% endblock %}
