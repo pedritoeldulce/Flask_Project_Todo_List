@@ -9,9 +9,10 @@
 
     <div class="col-md-12 col-md-offset-1">
     <h3 class="mt-4">Login</h3>
-        <form action="" class="" method="POST">  # Como se està trabajando con clases, forms hace el trabajo
-            <div class="form-group">
+        <form action="" class="" method="POST">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
 
+            <div class="form-group">
                 {{ render_field(form.username, class='form-control', placeholder="Username") }}
             </div>
             <div class="form-group">

@@ -14,6 +14,8 @@ pip install ->:
 
 - WTForms: Generar y validar de formulario
 
+-Flask-WTF: protege de los ataques CSRF
+
 __Manager__: permite levantar una aplicacion a traves de una instancia, permite definir las url a utilizar
 
 __Blueprint__: clase que permite trabajar con aplicaioines modulares,
@@ -21,3 +23,5 @@ __Blueprint__: clase que permite trabajar con aplicaioines modulares,
 Hay 2 formas de trabajar con formularios: etiquetas HTML y clases de Python(WTForm)
 
 Macro: funciones que como salida van a tener un HTML
+
+CSRFProtect:  
