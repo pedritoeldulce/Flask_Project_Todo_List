@@ -21,7 +21,7 @@ def index():
 def login():
     form = LoginForm(request.form)  # instanciamos form y lo enviamos al template
 
-    if request.method == 'POST':
+    if request.method == 'POST' and form.validate():
         print('Nueva sesion creada')
         print(form.username.data, form.password.data)
     return render_template('auth/login.html', title='Login', form=form)
