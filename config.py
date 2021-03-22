@@ -1,6 +1,6 @@
 # Configuraciones Globales del servidor
 class Config:
-    pass
+    SECRET_KEY = 'NoaYolandaAbigailPerezJustiniano_090118'  # key para autenticar los formularios
 
 
 # Configuraciones especìficas, para desarrollo
