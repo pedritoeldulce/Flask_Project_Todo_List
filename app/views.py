@@ -2,7 +2,7 @@ from flask import Blueprint
 from flask import render_template, request
 
 
-from forms import LoginForm  # Importamos el LoginForm
+from app.forms import LoginForm  # Importamos el LoginForm
 
 page = Blueprint('page', __name__)  #(nombre del contexto, contexto en el cual se crea la instancia)
 
@@ -19,6 +19,7 @@ def index():
 
 @page.route('/login', methods=['GET', 'POST'])
 def login():
+
     form = LoginForm(request.form)  # instanciamos form y lo enviamos al template
 
     if request.method == 'POST' and form.validate():
