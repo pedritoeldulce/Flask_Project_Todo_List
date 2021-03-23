@@ -2,7 +2,7 @@ from flask import Blueprint
 from flask import render_template, request
 
 
-from app.forms import LoginForm  # Importamos el LoginForm
+from app.forms import LoginForm, RegisterForm  # Importamos el LoginForm
 
 page = Blueprint('page', __name__)  #(nombre del contexto, contexto en el cual se crea la instancia)
 
@@ -26,3 +26,9 @@ def login():
         print('Nueva sesion creada')
         print(form.username.data, form.password.data)
     return render_template('auth/login.html', title='Login', form=form)
+
+
+@page.route('/register')
+def register():
+    form = RegisterForm()
+    return render_template('auth/register.html', title='Registro', form=form)
