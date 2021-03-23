@@ -12,3 +12,12 @@ class Users(db.Model):
 
     def __str__(self):
         return self.username
+
+    @classmethod
+    def create_element(cls, username, password, email):
+        user = Users(username=username, password=password, email=email)
+
+        db.session.add(user)
+        db.session.commit()
+
+        return user
