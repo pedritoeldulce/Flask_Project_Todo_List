@@ -27,3 +27,5 @@ Hay 2 formas de trabajar con formularios: etiquetas HTML y clases de Python(WTFo
 Macro: funciones que como salida van a tener un HTML
 
 CSRFProtect: ayuda a proteger contra los ataques CSRF 
+
+Flash: Lo usaremos para enviar mensaje de "resgitrado" al usuario.
