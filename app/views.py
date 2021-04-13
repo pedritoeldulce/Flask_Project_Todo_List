@@ -1,5 +1,6 @@
 from flask import Blueprint
 from flask import render_template, request
+from flask import flash
 
 
 from app.forms import LoginForm, RegisterForm
@@ -36,7 +37,9 @@ def register():
     if request.method == 'POST':
         if form.validate():
             user = Users.create_element(form.username.data, form.password.data, form.email.data)
-            print("Usuario creado de forma exitosa")
-            print(user.id)
+            flash('USuario registrado exitosamente.')
+            
+            # print("Usuario creado de forma exitosa")
+            # print(user.id)
 
     return render_template('auth/register.html', title='Registro', form=form)
